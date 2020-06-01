@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "536333803355",
+    "firebase_url": "https://foodie-9d2eb.firebaseio.com",
+    "project_id": "foodie-9d2eb",
+    "storage_bucket": "foodie-9d2eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536333803355:android:500982714e4bea33a9c47e",
+        "android_client_info": {
+          "package_name": "com.example.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536333803355-qb8v308582tal76g950fe67nstnpf7re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBO0jMs7V71G8JhiorFMVQG-Jl3q2RjnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536333803355-qb8v308582tal76g950fe67nstnpf7re.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
