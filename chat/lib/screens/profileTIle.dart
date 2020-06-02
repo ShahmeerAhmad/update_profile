@@ -11,32 +11,46 @@ class ProfileTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
-        child: ListTile(
-          leading: Container(
-            width: 50,
-            height: 50,
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.black),
-            child: CachedNetworkImage(
-              fit: BoxFit.fill,
-              placeholderFadeInDuration: Duration(milliseconds: 5000),
-              fadeInDuration: Duration(seconds: 2),
-              imageUrl: profileData.url,
-              imageBuilder: (context, imageProvider) => Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: imageProvider,
-                    fit: BoxFit.fill,
+        child: Column(
+          children: <Widget>[
+            ListTile(
+              leading: Container(
+                width: 50,
+                height: 50,
+                decoration:
+                    BoxDecoration(shape: BoxShape.circle, color: Colors.black),
+                child: CachedNetworkImage(
+                  fit: BoxFit.fill,
+                  placeholderFadeInDuration: Duration(milliseconds: 5000),
+                  fadeInDuration: Duration(seconds: 2),
+                  imageUrl: profileData.url,
+                  imageBuilder: (context, imageProvider) => Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: imageProvider,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ),
+                  placeholder: (context, url) => Loading(),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
                 ),
               ),
-              placeholder: (context, url) => Loading(),
-              errorWidget: (context, url, error) => Icon(Icons.error),
+              title: Text(profileData.name),
+              subtitle: Text(profileData.gender),
             ),
-          ),
-          title: Text(profileData.name),
-          subtitle: Text(profileData.gender),
+            SizedBox(
+              height: 10,
+            ),
+            Image.network(
+              profileData.url,
+              fit: BoxFit.fill,
+            ),
+            SizedBox(
+              height: 10,
+            )
+          ],
         ),
       ),
     );
